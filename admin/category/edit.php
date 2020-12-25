@@ -1,4 +1,7 @@
 <?php
+require 'php/function.php';
+session_start();
+protect_page();
 require ('../../php/db.php');
 $text = $_POST['genre'];
 $genre = $bd->query('SELECT * FROM `categories` WHERE `id` = "' . $_GET['id'] . '";')->fetch();

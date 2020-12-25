@@ -18,7 +18,6 @@
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
     border: red 3px solid; }
-
 body input:required:valid,
 body textarea:required:valid {
     border: green 3px solid; }

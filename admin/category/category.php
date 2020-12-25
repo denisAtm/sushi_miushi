@@ -1,4 +1,7 @@
-<?php require '../parts/header.php'?>
+<?php require '../parts/header.php';
+require 'php/function.php';
+session_start();
+protect_page();?>
 <div class="container">
     <table class="table">
         <thead>

@@ -1,4 +1,8 @@
 <?php require '../parts/header.php'?>
+<?php require '../../php/function.php';
+session_start();
+protect_page();
+?>
 <div class="container">
     <table class="table">
         <thead>
@@ -20,22 +24,24 @@
         <tbody>
         <?php
             require ('../../php/db.php');
-            $category = $bd->query('SELECT products.id,products.name, products.price, products.parametr1, products.parametr2, products.parametr3, products.is_new, products.is_hit, products.is_veg, products.category_id, products.img_url, categories.name as categ_name FROM products INNER JOIN categories WHERE products.category_id = categories.id')->fetchAll();
-            foreach ($category as $genre) :?>
+            $products = $bd->query('SELECT products.id,products.name, products.price, products.parametr1, products.parametr2, products.parametr3, products.is_new, products.is_hit, products.is_veg, products.category_id, products.img_url, categories.name as categ_name FROM products INNER JOIN categories WHERE products.category_id = categories.id')->fetchAll();
+            foreach ($products as $product) :?>
             <tr>
-                <td><?=$genre['id'];?></td>
-                <td><?=$genre['name'];?></td>
-                <td><?=$genre['price'];?></td>
-                <td><?=$genre['parametr1'];?> шт.</td>
-                <td><?=$genre['parametr2'];?> гр.</td>
-                <td><?=$genre['parametr3'];?> калл.</td>
-                <td><?=$genre['is_new'];?></td>
-                <td><?=$genre['is_hit'];?></td>
-                <td><?=$genre['is_veg'];?></td>
-                <td><?=$genre['categ_name'];?></td>
-                <td><?=$genre['img_url'];?></td>
-                <td><a href="/admin/products/delete.php?id=<?=$genre['id']?>" class="btn btn-danger">Удалить</a></td>
-                <td><a href="/admin/products/edit.php?id=<?=$genre['id']?>" class="btn btn-warning">Редактировать</a></td>
+                <td><?=$product['id'];?></td>
+                <td><?=$product['name'];?></td>
+                <td><?=$product['price'];?></td>
+                <td><?=$product['parametr1'];?> шт.</td>
+                <td><?=$product['parametr2'];?> гр.</td>
+                <td><?=$product['parametr3'];?> калл.</td>
+                <td><?=$product['is_new'];?></td>
+                <td><?=$product['is_hit'];?></td>
+                <td><?=$product['is_veg'];?></td>
+                <td><?=$product['categ_name'];?></td>
+                <td>
+                    <img src="/img/products/<?=$product['category_id'];?>/<?=$product['img_url'];?>" alt="">
+                </td>
+                <td><a href="/admin/products/delete.php?id=<?=$product['id']?>" class="btn btn-danger">Удалить</a></td>
+                <td><a href="/admin/products/edit.php?id=<?=$product['id']?>" class="btn btn-warning">Редактировать</a></td>
             </tr>
             <?php endforeach;?>
         </tbody>

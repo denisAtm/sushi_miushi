@@ -1,5 +1,8 @@
 <?php require '../parts/header.php'?>
 <?php
+require 'php/function.php';
+session_start();
+protect_page();
 require ('../../php/db.php');
 ?>
 <div class="container">
