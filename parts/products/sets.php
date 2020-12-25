@@ -27,9 +27,9 @@
             ?>
             <div class="catalog__image">
                 <picture>
-                    <source srcset="../../img/set/<?=$genre['img_url'];?>, ../../img/set/<?=$genre['img_url'];?>2x">
-                    <source srcset="../../img/set/<?=$genre['img_url'];?>, ../../img/set/<?=$genre['img_url'];?> 2x">
-                    <img class="catalog__item-image" src="../../img/set/<?=$genre['img_url'];?>" srcset="../../img/set/<?=$genre['img_url'];?> 2x" alt="">
+                    <source srcset="../../img/products/set/<?=$genre['img_url'];?>, ../../img/set/<?=$genre['img_url'];?>2x">
+                    <source srcset="../../img/products/set/<?=$genre['img_url'];?>, ../../img/set/<?=$genre['img_url'];?> 2x">
+                    <img class="catalog__item-image" src="../../img/set/<?=$genre['img_url'];?>" srcset="../../img/products/set/<?=$genre['img_url'];?> 2x" alt="">
                 </picture>
             </div>
 

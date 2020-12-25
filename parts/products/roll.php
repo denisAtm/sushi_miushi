@@ -26,9 +26,9 @@
             ?>
             <div class="catalog__image">
                 <picture>
-                    <source media="(min-width: 1170px)" srcset="../../img/roll/<?=$genre['img_url'];?>, ../../img/roll/<?=$genre['img_url'];?> 2x">
-                    <source media="(min-width: 750px )" srcset="../../img/roll/<?=$genre['img_url'];?>, ../../img/roll/<?=$genre['img_url'];?> 2x">
-                    <img class="catalog__item-image" src="../../img/roll/<?=$genre['img_url'];?>" srcset="../../img/roll/<?=$genre['img_url'];?> 2x" alt="Кунсей батакон">
+                    <source media="(min-width: 1170px)" srcset="../../img/products/roll/<?=$genre['img_url'];?>, ../../img/roll/<?=$genre['img_url'];?> 2x">
+                    <source media="(min-width: 750px )" srcset="../../img/products/roll/<?=$genre['img_url'];?>, ../../img/roll/<?=$genre['img_url'];?> 2x">
+                    <img class="catalog__item-image" src="../../img/roll/<?=$genre['img_url'];?>" srcset="../../img/products/roll/<?=$genre['img_url'];?> 2x" alt="Кунсей батакон">
                 </picture>
             </div>
             <div class="catalog__info">

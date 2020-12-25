@@ -9,14 +9,14 @@
     <meta name="author" content="Anna Orlova">
     <meta name="keywords" content="sushi, miushi, food, wok, kursk">
     <title>Миюши: суши и роллы</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/main.min.css">
-    <link rel="stylesheet" type="text/css" href="css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="css/fonts.min.css">
-    <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
-    <link rel="stylesheet" href="libs/font-awesome-4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="libs/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="libs/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/libs/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css">
 </head>
 <body>
 <h1 class="visually-hidden">Миюши: суши и роллы</h1>
@@ -26,9 +26,9 @@
         <nav class="page-header__menu menu">
             <a class="menu__logo">
                 <picture>
-                    <source media="(min-width: 1170px)" srcset="img/лого-ноут@1x.png, img/лого-ноут@2x.png 2x">
-                    <source media="(min-width: 750px )" srcset="img/лого-планшет@1x.png, img/лого-планшет@2x.png 2x">
-                    <img class="menu__logo--img" src="img/лого@1x.png" srcset="img/лого@2x.png 2x" alt="Лого">
+                    <source media="(min-width: 1170px)" srcset="/img/лого-ноут@1x.png, /img/лого-ноут@2x.png 2x">
+                    <source media="(min-width: 750px )" srcset="/img/лого-планшет@1x.png, /img/лого-планшет@2x.png 2x">
+                    <img class="menu__logo--img" src="/img/лого@1x.png" srcset="img/лого@2x.png 2x" alt="Лого">
                 </picture>
             </a>
             <div class="menu--info info">
@@ -97,7 +97,7 @@
                     <svg class="shopping-cart">
                         <use xlink:href="img/sprite.svg#online-shopping-cart"></use>
                     </svg>
-                    <span>Корзина</span>
+                    <a href="/pages/cart.php"><span>Корзина</span></a>
                 </li>
             </ul>
         </nav>

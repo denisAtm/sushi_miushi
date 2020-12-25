@@ -92,17 +92,17 @@
                 <ul class="social__list">
                     <li class="social__item">
                         <a class="social__link" href="#">
-                            <img src="img/facebook@1x.png" srcset="img/facebook@2x.png 2x" alt="Мы в Фейсбуке">
+                            <img src="/img/facebook@1x.png" srcset="/img/facebook@2x.png 2x" alt="Мы в Фейсбуке">
                         </a>
                     </li>
                     <li class="social__item">
                         <a class="social__link" href="#">
-                            <img src="img/instagram@1x.png" srcset="img/instagram@2x.png 2x" alt="instagram">
+                            <img src="/img/instagram@1x.png" srcset="/img/instagram@2x.png 2x" alt="instagram">
                         </a>
                     </li>
                     <li class="social__item">
                         <a class="social__link" href="#">
-                            <img src="img/vkontakte@1x.png" srcset="img/vkontakte@2x.png 2x" alt="vkontakte">
+                            <img src="/img/vkontakte@1x.png" srcset="/img/vkontakte@2x.png 2x" alt="vkontakte">
                         </a>
                     </li>
                 </ul>
@@ -117,15 +117,15 @@
     </div>
 </footer>
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/jquery-migrate.min.js"></script>
-<script src="libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/jquery-migrate.min.js"></script>
+<script src="/libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
-<script src="js/main.js"></script>
-<script src="js/main.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/main.min.js"></script>
 
-<script src="js/svg-icon-polyfill.min.js"></script>
-<script src="js/picturefill.min.js"></script>
+<script src="/js/svg-icon-polyfill.min.js"></script>
+<script src="/js/picturefill.min.js"></script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
 

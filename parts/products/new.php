@@ -11,14 +11,14 @@
     <ul class="catalog__list owl-carousel owl-theme">
         <?php
         require 'php/db.php';
-        $category = $bd->query('SELECT products.id,products.name, products.price, products.parametr1, products.parametr2, products.parametr3, products.is_new, products.is_hit, products.is_veg, products.category_id, products.img_url, categories.name as categ_name FROM products INNER JOIN categories WHERE products.category_id = categories.id AND products.is_new = 1')->fetchAll();
-        foreach ($category as $genre): ?>
+        $categories = $bd->query('SELECT products.id,products.name, products.price, products.parametr1, products.parametr2, products.parametr3, products.is_new, products.is_hit, products.is_veg, products.category_id, products.img_url, categories.name as categ_name FROM products INNER JOIN categories WHERE products.category_id = categories.id AND products.is_new = 1')->fetchAll();
+        foreach ($categories as $category): ?>
         <li class="catalog__item">
             <?php
-            if ($genre['is_veg'] == 1){
+            if ($category['is_veg'] == 1){
                 echo ' <div class="veg"><span>veg</span></div>';
             }
-            if ($genre['is_hit'] == 1){
+            if ($category['is_hit'] == 1){
                 echo '  <div class="hot">
 							<picture>
 								<source media="(min-width: 1170px)" srcset="img/fire@1x.png, img/fire@2x.png 2x">
@@ -27,7 +27,7 @@
 							</picture>
 						</div>';
             }
-            if ($genre['is_new'] == 1){
+            if ($category['is_new'] == 1){
                 echo ' 	<div class="new-flag">new</div>';
             }
 
@@ -38,93 +38,93 @@
                     <picture>
                         <source srcset="
                       <?php
-                        if ($genre['category_id'] == 1){
-                            echo '../../img/set/';
+                        if ($category['category_id'] == 1){
+                            echo '../../img/products/1/';
                         }
-                        if ($genre['category_id'] == 2){
-                            echo '../../img/roll/';
+                        if ($category['category_id'] == 2){
+                            echo '../../img/products/2/';
                         }
-                        if ($genre['category_id'] == 3){
-                            echo '../../img/pizza/';
+                        if ($category['category_id'] == 3){
+                            echo '../../img/products/3/';
                         }
-                        if ($genre['category_id'] == 4){
-                            echo '../../img/wok/';
-                        }?><?=$genre['img_url'];?>,
-                        <?php
-                        if ($genre['category_id'] == 1){
-                            echo '../../img/set/';
+                        if ($category['category_id'] == 4){
+                            echo '../../img/products/4/';
+                        }?><?=$category['img_url'];?>,
+                          <?php
+                        if ($category['category_id'] == 1){
+                            echo '../../img/products/1/';
                         }
-                        if ($genre['category_id'] == 2){
-                            echo '../../img/roll/';
+                        if ($category['category_id'] == 2){
+                            echo '../../img/products/2/';
                         }
-                        if ($genre['category_id'] == 3){
-                            echo '../../img/pizza/';
+                        if ($category['category_id'] == 3){
+                            echo '../../img/products/3/';
                         }
-                        if ($genre['category_id'] == 4){
-                            echo '../../img/wok/';
+                        if ($category['category_id'] == 4){
+                            echo '../../img/products/4/';
+                        }?><?=$category['img_url'];?>,2x">
+                        <source srcset="
+                          <?php
+                        if ($category['category_id'] == 1){
+                            echo '../../img/products/1/';
                         }
-                        ?><?=$genre['img_url'];?>2x">
-                        <source srcset="<?php
-                        if ($genre['category_id'] == 1){
-                            echo '../../img/set/';
+                        if ($category['category_id'] == 2){
+                            echo '../../img/products/2/';
                         }
-                        if ($genre['category_id'] == 2){
-                            echo '../../img/roll/';
+                        if ($category['category_id'] == 3){
+                            echo '../../img/products/3/';
                         }
-                        if ($genre['category_id'] == 3){
-                            echo '../../img/pizza/';
+                        if ($category['category_id'] == 4){
+                            echo '../../img/products/4/';
+                        }?><?=$category['img_url'];?>,
+                          <?php
+                        if ($category['category_id'] == 1){
+                            echo '../../img/products/1/';
                         }
-                        if ($genre['category_id'] == 4){
-                            echo '../../img/wok/';
-                        }?><?=$genre['img_url'];?>,
-                        <?php
-                        if ($genre['category_id'] == 1){
-                            echo '../../img/set/';
+                        if ($category['category_id'] == 2){
+                            echo '../../img/products/2/';
                         }
-                        if ($genre['category_id'] == 2){
-                            echo '../../img/roll/';
+                        if ($category['category_id'] == 3){
+                            echo '../../img/products/3/';
                         }
-                        if ($genre['category_id'] == 3){
-                            echo '../../img/pizza/';
-                        }
-                        if ($genre['category_id'] == 4){
-                            echo '../../img/wok/';
-                        }?><?=$genre['img_url'];?> 2x">
+                        if ($category['category_id'] == 4){
+                            echo '../../img/products/4/';
+                        }?><?=$category['img_url'];?>, 2x">
                         <img class="catalog__item-image" src="
-                        <?php
-                        if ($genre['category_id'] == 1){
-                            echo '../../img/set/';
+                         <?php
+                        if ($category['category_id'] == 1){
+                            echo '../../img/products/1/';
                         }
-                        if ($genre['category_id'] == 2){
-                            echo '../../img/roll/';
+                        if ($category['category_id'] == 2){
+                            echo '../../img/products/2/';
                         }
-                        if ($genre['category_id'] == 3){
-                            echo '../../img/pizza/';
+                        if ($category['category_id'] == 3){
+                            echo '../../img/products/3/';
                         }
-                        if ($genre['category_id'] == 4){
-                            echo '../../img/wok/';
-                        }?><?=$genre['img_url'];?>" srcset="
-                        <?php
-                        if ($genre['category_id'] == 1){
-                            echo '../../img/set/';
-                        }
-                        if ($genre['category_id'] == 2){
-                            echo '../../img/roll/';
-                        }
-                        if ($genre['category_id'] == 3){
-                            echo '../../img/pizza/';
-                        }
-                        if ($genre['category_id'] == 4){
-                            echo '../../img/wok/';
-                        }?><?=$genre['img_url'];?> 2x" alt="">
+                        if ($category['category_id'] == 4){
+                            echo '../../img/products/4/';
+                        }?><?=$category['img_url'];?>, srcset="
+                             <?php
+                             if ($category['category_id'] == 1){
+                                 echo '../../img/products/1/';
+                             }
+                             if ($category['category_id'] == 2){
+                                 echo '../../img/products/2/';
+                             }
+                             if ($category['category_id'] == 3){
+                                 echo '../../img/products/3/';
+                             }
+                             if ($category['category_id'] == 4){
+                                 echo '../../img/products/4/';
+                             }?><?=$category['img_url'];?>, 2x" alt="">
                     </picture>
                 </div>
             </div>
             <div class="catalog__info">
-                <p class="catalog__name"><?=$genre['name'];?></p>
-                <p class="catalog__desk"><?=$genre['parametr1'];?> шт. | <?=$genre['parametr2'];?> г. | <?=$genre['parametr3'];?> Kkal</p>
+                <p class="catalog__name"><?=$category['name'];?></p>
+                <p class="catalog__desk"><?=$category['parametr1'];?> шт. | <?=$category['parametr2'];?> г. | <?=$category['parametr3'];?> Kkal</p>
                 <div class="catalog__price__wrapper">
-                    <p class="catalog__price"><?=$genre['price'];?> <sup>руб.</sup></p>
+                    <p class="catalog__price"><?=$category['price'];?> <sup>руб.</sup></p>
                     <div class="catalog__count">
                         <button class="count count-min" name="min">−</button>
                         <input class="catalog-input" type="text" name="count" pattern="[0-9]*" value="1">
